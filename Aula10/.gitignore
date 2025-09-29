@@ -1,0 +1,46 @@
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# Arquivos de configuração do editor
+.vscode/
+.idea/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Configuração do sistema operacional
+*.swp
+*.swo
+
+# Arquivos temporários
+*.tmp
+
+# Banco de dados local
+*.sqlite3
+
+# Test coverage
+htmlcov/
+.coverage
+coverage.xml
+.cache
+nosetests.xml
+pytest_cache/
+
+# Uvicorn/PID files
+*.pid
+
+# Pasta de build/distribuição
+dist/
+build/
+*.egg-info/

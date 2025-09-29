@@ -16,7 +16,17 @@ def home():
 
 @app.get("/hello/{nome}")
 def saudacao(nome: str):
-    return {"mensagem": f"Olá, {nome}!"}
+    try:
+        # Verificando se o nome tem mais de 3 caracteres
+        if len(nome) <= 3:
+            raise ValueError("O nome precisa ter mais de 3 caracteres!")
+
+        return {"mensagem": f"Olá, {nome}!"}
+
+    except Exception as e:
+        # Aqui estamos só imprimindo no console do servidor
+        print(f"Ocorreu um erro: {e}")
+        return {"mensagem": "❌ Ocorreu um erro no servidor, verifique o console."}
 
 @app.post("/user")
 def criar_usuario(user_req: UserRequest):
