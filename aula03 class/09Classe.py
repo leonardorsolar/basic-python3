@@ -107,3 +107,6 @@ print(resposta)
 
 # 📦 Mostra os usuários "salvos no banco"
 print("Usuários no banco:", user_repository.get_all())
+
+for user in user_repository.get_all():
+    print(user.show())
